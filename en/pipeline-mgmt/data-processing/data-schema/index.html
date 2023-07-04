@@ -125,13 +125,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -833,14 +833,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_2" id="__nav_1_7_2_label" tabindex="0">
-          Ingestion
+          Data ingestion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_2">
           <span class="md-nav__icon md-icon"></span>
-          Ingestion
+          Data ingestion
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -939,14 +939,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_3" id="__nav_1_7_3_label" tabindex="0">
-          Data Processing
+          Data processing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1_7_3">
           <span class="md-nav__icon md-icon"></span>
-          Data Processing
+          Data processing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1701,11 +1701,11 @@
 
 
 <h1 id="data-schema">Data schema</h1>
-<p>This article explains the data schema and format in Clickstream Analytics on AWS. This solution uses an <strong>event-based</strong> data model to store and analyze clickstream data, every activity (e.g., click, view) on the clients is modeled as an event with multiple dimensions. Dimensions are common for all events, but customers have the flexibility to use JSON object to store values into some dimensions (e.g., event parameters, use attributes), which will cater for the need of collecting information that are specific for their business. Those JSON will be stored in special data types which allow customers to unnest the values in the analytics engines.</p>
+<p>This article explains the data schema and format in Clickstream Analytics on AWS. This solution uses an <strong>event-based</strong> data model to store and analyze clickstream data, every activity (e.g., click, view) on the clients is modeled as an event with multiple dimensions. Dimensions are common for all events, but customers have the flexibility to use JSON object to store values into some dimensions (e.g., event parameters, user attributes), which will cater for the need of collecting information that are specific for their business. Those JSON will be stored in special data types which allow customers to unnest the values in the analytics engines.</p>
 <h2 id="database-and-table">Database and table</h2>
 <p>For each project, the solution creates a database with name of <code>&lt;project-id&gt;</code> in Redshift and Athena. In Redshift, each App will have a schema with name of <code>app_id</code>, within which event data are stored in <code>ods_event</code> tables, user-related attributes are stored in <code>dim_user</code> table. In Athena, data from all apps in the project will be stored in <code>ods_event</code> table with partitions of app_id, year, month, and day.</p>
 <h2 id="columns">Columns</h2>
-<p>Each column in the ods_event table represents an event-specific parameter. Note that some parameters are nested within a Super field in Redshift or Array in Athena, and some fields such as items and event_params are repeatable. Table columns are described below.</p>
+<p>Each column in the ods_event table represents an event-specific parameter. Note that some parameters are nested within a Super field in Redshift or Array in Athena, and those fields (e.g., items and event_params) contains parameters that are repeatable. Table columns are described below.</p>
 <h3 id="event-fields">Event fields</h3>
 <table>
 <thead>

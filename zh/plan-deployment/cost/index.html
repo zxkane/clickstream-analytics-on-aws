@@ -127,13 +127,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -593,11 +593,25 @@
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    日志和监控
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     额外功能
   </a>
   
     <nav class="md-nav" aria-label="额外功能">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secrets-manager" class="md-nav__link">
+    Secrets Manager
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#amazon" class="md-nav__link">
@@ -607,7 +621,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     应用负载均衡器访问日志
   </a>
   
@@ -1581,11 +1595,25 @@
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    日志和监控
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     额外功能
   </a>
   
     <nav class="md-nav" aria-label="额外功能">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#secrets-manager" class="md-nav__link">
+    Secrets Manager
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#amazon" class="md-nav__link">
@@ -1595,7 +1623,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     应用负载均衡器访问日志
   </a>
   
@@ -1626,11 +1654,12 @@
 
   <h1>成本</h1>
 
-<div class="admonition important">
-<p class="admonition-title">重要</p>
+<div class="admonition info">
+<p class="admonition-title">重要提示</p>
 <p>以下的成本估算仅为示例，实际成本可能因环境而异。</p>
 </div>
-<p>在运行此解决方案时，您需要承担使用亚马逊云技术服务的费用。该解决方案的大部分费用由数据管道产生。截至本修订版，影响解决方案成本的主要因素包括：</p>
+<p>您需要承担运行此解决方案时使用的 AWS 服务的费用。 部署此解决方案只会在您的 AWS 账户中创建一个解决方案 Web 控制台，该控制台是无服务器架构，通常AWS的免费套餐可以覆盖成本。</p>
+<p>该解决方案的大部分成本是由数据管道产生的。 截至本次修订，影响解决方案成本的主要因素包括：</p>
 <ul>
 <li>
 <p><strong>摄入模块</strong>，费用取决于摄入服务器的大小和所选择的数据宿类型。</p>
@@ -1648,9 +1677,9 @@
 <p><strong>附加功能</strong></p>
 </li>
 </ul>
-<p>以下是以不同数据管道配置的每日数据量为10/100/1000/10000个请求每秒（RPS）的成本估算。成本估算由模块提供。根据您的实际配置，按模块累加成本以获得您的用例的总成本。</p>
-<div class="admonition important">
-<p class="admonition-title">重要</p>
+<p>以下是以不同数据管道配置的每日数据量为10/100/1000个请求每秒（RPS）的成本估算。成本估算由模块提供。根据您的实际配置，按模块累加成本以获得您的用例的总成本。</p>
+<div class="admonition info">
+<p class="admonition-title">重要提示</p>
 <p>截至本修订版，以下成本是使用<code>On-Demand</code>价格在<code>us-east-1</code>区域以美元计量的。</p>
 </div>
 <h2 id="_1">摄入模块</h2>
@@ -1658,16 +1687,16 @@
 <ul>
 <li>应用程序负载均衡器</li>
 <li>用于ECS的EC2实例</li>
-<li>数据宿（Kinesis | Kafka | 直接到S3）</li>
+<li>数据宿 - Data sink（Kinesis Data Streams | Kafka | 直接到S3）</li>
 <li>S3存储</li>
 <li>数据传输出（DTO）</li>
 </ul>
 <p>主要假设包括：</p>
 <ul>
-<li>请求有效载荷：1KB（压缩后，1:15的比例）</li>
-<li>MSK配置（待定）</li>
-<li>KDS配置（按需，预配-分片数）</li>
-<li>10/100/1000/10000RPS</li>
+<li>请求有效载荷：1KB（压缩后，1:10的比例）</li>
+<li>MSK配置（m5.large * 2）</li>
+<li>KDS配置（按需，预配 - 2 分片数）</li>
+<li>10/100/1000 RPS</li>
 </ul>
 <table>
 <thead>
@@ -1678,110 +1707,117 @@
 <th>缓冲类型（Buffer type）</th>
 <th>缓冲费用（Buffer cost）</th>
 <th>S3</th>
-<th>NAT网关（NAT Gateway）</th>
-<th>CloudWatch</th>
 <th>总计（USD）</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>10RPS</td>
-<td>7.2</td>
-<td>122.4</td>
+<td>7</td>
+<td>122</td>
 <td>Kinesis（按需）</td>
 <td>36</td>
 <td>3</td>
-<td></td>
-<td>14.4</td>
-<td>183</td>
+<td>168</td>
 </tr>
 <tr>
 <td></td>
-<td>7.2</td>
-<td>122.4</td>
-<td>MSK（m5.large * 2）</td>
-<td>417.6</td>
+<td>7</td>
+<td>122</td>
+<td>Kinesis (预备 2 shard)</td>
+<td>22</td>
 <td>3</td>
-<td></td>
-<td>7.2</td>
-<td>557.4</td>
+<td>154</td>
 </tr>
 <tr>
 <td></td>
-<td>7.2</td>
-<td>122.4</td>
-<td>无缓冲（None）</td>
+<td>7</td>
+<td>122</td>
+<td>MSK (m5.large * 2, connector MCU * 1)</td>
+<td>417</td>
+<td>3</td>
+<td>549</td>
+</tr>
+<tr>
+<td></td>
+<td>7</td>
+<td>122</td>
+<td>无缓冲</td>
 <td></td>
 <td>3</td>
-<td></td>
-<td>14.4</td>
-<td>147</td>
+<td>132</td>
 </tr>
 <tr>
 <td>100RPS</td>
-<td>43.2</td>
-<td>122.4</td>
+<td>43</td>
+<td>122</td>
 <td>Kinesis（按需）</td>
-<td>86.4</td>
+<td>86</td>
 <td>3</td>
-<td>64.8</td>
-<td>14.4</td>
-<td>269.4</td>
+<td>254</td>
 </tr>
 <tr>
 <td></td>
-<td>43.2</td>
-<td>122.4</td>
-<td>MSK（m5.large * 2）</td>
-<td>417.6</td>
+<td>43</td>
+<td>122</td>
+<td>Kinesis (预备 2 shard)</td>
+<td>26</td>
 <td>3</td>
-<td></td>
-<td>14.4</td>
-<td>600.6</td>
+<td>194</td>
 </tr>
 <tr>
 <td></td>
-<td>43.2</td>
-<td>122.4</td>
-<td>无缓冲（None）</td>
+<td>43</td>
+<td>122</td>
+<td>MSK (m5.large * 2, connector MCU * 1)</td>
+<td>417</td>
+<td>3</td>
+<td>585</td>
+</tr>
+<tr>
+<td></td>
+<td>43</td>
+<td>122</td>
+<td>无缓冲</td>
 <td></td>
 <td>3</td>
-<td></td>
-<td>14.4</td>
-<td>183</td>
+<td>168</td>
 </tr>
 <tr>
 <td>1000RPS</td>
 <td>396</td>
-<td>122.4</td>
+<td>122</td>
 <td>Kinesis（按需）</td>
 <td>576</td>
-<td>14.4</td>
-<td></td>
-<td>14.4</td>
-<td>1123.2</td>
+<td>14</td>
+<td>1108</td>
 </tr>
 <tr>
 <td></td>
 <td>396</td>
-<td>122.4</td>
-<td>MSK（m5.large * 2）</td>
-<td>532.8</td>
-<td>7.2</td>
-<td></td>
-<td>14.4</td>
-<td>1116</td>
+<td>122</td>
+<td>Kinesis (预备 10 shard)</td>
+<td>146</td>
+<td>14</td>
+<td>678</td>
 </tr>
 <tr>
 <td></td>
 <td>396</td>
-<td>122.4</td>
-<td>无缓冲（None）</td>
+<td>122</td>
+<td>MSK (m5.large * 2, connector MCU * 2~3)</td>
+<td>530</td>
+<td>14</td>
+<td>1062</td>
+</tr>
+<tr>
 <td></td>
-<td>7.2</td>
+<td>396</td>
+<td>122</td>
+<td>无缓冲</td>
 <td></td>
-<td>14.4</td>
-<td>540</td>
+<td>14</td>
+<td>532</td>
 </tr>
 </tbody>
 </table>
@@ -1797,7 +1833,7 @@
 </ul>
 <p>主要假设包括：</p>
 <ul>
-<li>10/100/1000/10000 RPS</li>
+<li>10/100/1000 RPS</li>
 <li>数据处理间隔：每小时/每6小时/每日</li>
 <li>EMR运行三个内置插件来处理数据</li>
 </ul>
@@ -1806,7 +1842,6 @@
 <tr>
 <th>每日数据量/每秒请求数 (RPS)</th>
 <th>EMR调度间隔</th>
-<th>EMR作业运行时间</th>
 <th>EMR成本</th>
 <th>Redshift类型</th>
 <th>Redshift成本</th>
@@ -1817,122 +1852,92 @@
 <tr>
 <td>10RPS</td>
 <td>每小时</td>
-<td>43小时</td>
-<td>$14.4</td>
+<td>28</td>
 <td>无服务器 (基于8个RPU)</td>
-<td>$36</td>
-<td>$50.4</td>
+<td>68</td>
+<td>96</td>
 </tr>
 <tr>
 <td></td>
 <td>每6小时</td>
-<td></td>
-<td></td>
-<td>无服务器</td>
-<td></td>
-<td></td>
+<td>10.8</td>
+<td>无服务器 (基于8个RPU)</td>
+<td>11</td>
+<td>21.8</td>
 </tr>
 <tr>
 <td></td>
 <td>每日</td>
-<td></td>
-<td></td>
-<td>无服务器</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>每小时</td>
-<td></td>
-<td></td>
-<td>集群</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>每6小时</td>
-<td></td>
-<td></td>
-<td>集群</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>每日</td>
-<td></td>
-<td></td>
-<td>集群</td>
-<td></td>
-<td></td>
+<td>9.6</td>
+<td>无服务器 (基于8个RPU)</td>
+<td>3</td>
+<td>12.6</td>
 </tr>
 <tr>
 <td>100RPS</td>
 <td>每小时</td>
-<td>78小时</td>
-<td>$57.6</td>
+<td>105</td>
 <td>无服务器 (基于8个RPU)</td>
-<td>$72</td>
-<td>$129.6</td>
+<td>72</td>
+<td>177</td>
 </tr>
 <tr>
 <td></td>
 <td>每6小时</td>
-<td></td>
-<td></td>
-<td>无服务器</td>
-<td></td>
-<td></td>
+<td>99</td>
+<td>无服务器 (基于8个RPU)</td>
+<td>17.2</td>
+<td>116.2</td>
 </tr>
 <tr>
 <td></td>
 <td>每日</td>
-<td></td>
-<td></td>
-<td>无服务器</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>每小时</td>
-<td></td>
-<td></td>
-<td>集群</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>每6小时</td>
-<td></td>
-<td></td>
-<td>集群</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>每日</td>
-<td></td>
-<td></td>
-<td>集群</td>
-<td></td>
-<td></td>
+<td>140</td>
+<td>无服务器 (基于8个RPU)</td>
+<td>16.9</td>
+<td>156.9</td>
 </tr>
 <tr>
 <td>1000RPS</td>
 <td>每小时</td>
-<td>480小时</td>
-<td>964.8</td>
+<td>1362</td>
 <td>无服务器 (基于8个RPU)</td>
-<td>$300</td>
-<td>$1264.8</td>
+<td>172</td>
+<td>1534</td>
+</tr>
+<tr>
+<td></td>
+<td>每6小时</td>
+<td>678</td>
+<td>无服务器 (基于8个RPU)</td>
+<td>176</td>
+<td>854</td>
+</tr>
+<tr>
+<td></td>
+<td>每日</td>
+<td>2589</td>
+<td>无服务器 (基于8个RPU)</td>
+<td>352</td>
+<td>2941</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition info">
+<p class="admonition-title">提示</p>
+<p>对于1000 PRS 每日的费用，为使用了如下EMR配置的费用。</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">&quot;sparkConfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="s2">&quot;spark.emr-serverless.executor.disk=200g&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="s2">&quot;spark.executor.instances=16&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="s2">&quot;spark.dynamicAllocation.initialExecutors=48&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="s2">&quot;spark.executor.memory=100g&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="s2">&quot;spark.executor.cores=16&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">&quot;inputRePartitions&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
 <h2 id="_3">仪表盘</h2>
 <p>如果您选择启用，仪表盘模块包括以下成本组成部分：</p>
 <ul>
@@ -1942,6 +1947,9 @@
 <ul>
 <li>QuickSight企业版</li>
 <li>不包括Q成本</li>
+<li><strong>两个作者</strong>每月订阅</li>
+<li><strong>十个读者</strong>，每月工作22天，其中5%为活跃读者，50%为经常读者，25%为偶尔读者，20%为不活跃读者</li>
+<li>10GB的SPICE容量</li>
 </ul>
 <table>
 <thead>
@@ -1956,27 +1964,35 @@
 <tbody>
 <tr>
 <td>所有大小</td>
-<td>4</td>
-<td>10</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>4</td>
-<td>20</td>
-<td></td>
-<td></td>
+<td>48</td>
+<td>18.80</td>
+<td>0</td>
+<td>66.80</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_4">额外功能</h2>
+<div class="admonition info">
+<p class="admonition-title">提示</p>
+<p>所有数据管道都适用于以上 QuickSight 费用，即使是在解决方案之外管理的可视化内容也是如此。</p>
+</div>
+<h2 id="_4">日志和监控</h2>
+<p>方案使用CloudWatch Logs，CloudWatch Metrics和CloudWatch Dashboard来实现日志，监控，展示功能，合计费用约为每月约14美元，根据Logs的使用量和Metrics的数量会有一定浮动。</p>
+<h2 id="_5">额外功能</h2>
 <p>只有在您选择启用以下功能时，您才会被收取额外费用。</p>
+<h3 id="secrets-manager">Secrets Manager</h3>
+<ul>
+<li>
+<p>如果您启用了报告功能，该解决方案将在 Secrets Manager 中创建一个密钥，用于存储 QuickSight 可视化使用的 Redshift 凭据。<strong>费用</strong>：0.4 美元/月。</p>
+</li>
+<li>
+<p>如果您启用了摄入模块的身份验证功能，您需要在 Secrets Manager 中创建一个密钥，用于存储 OIDC 的信息。<strong>费用</strong>：0.4 美元/月。</p>
+</li>
+</ul>
 <h3 id="amazon">Amazon全球加速器</h3>
 <p>它产生固定的按小时费用和按每日数据传输量的费用。</p>
 <p>关键假设：</p>
 <ul>
-<li>接入部署在us-east-1</li>
+<li>接入部署在<code>us-east-1</code></li>
 </ul>
 <table>
 <thead>
@@ -1990,31 +2006,25 @@
 <tbody>
 <tr>
 <td>10RPS</td>
-<td></td>
-<td></td>
-<td></td>
+<td>18</td>
+<td>0.3</td>
+<td>18.3</td>
 </tr>
 <tr>
 <td>100RPS</td>
-<td></td>
-<td></td>
-<td></td>
+<td>18</td>
+<td>3</td>
+<td>21</td>
 </tr>
 <tr>
 <td>1000RPS</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10000RPS</td>
-<td></td>
-<td></td>
-<td></td>
+<td>18</td>
+<td>30</td>
+<td>38</td>
 </tr>
 </tbody>
 </table>
-<h3 id="_5">应用负载均衡器访问日志</h3>
+<h3 id="_6">应用负载均衡器访问日志</h3>
 <p>您需要为 Amazon S3 的存储费用付费，但无需为 Elastic Load Balancing 用于将日志文件发送到 Amazon S3 的带宽使用付费。有关存储费用的更多信息，请参阅 <a href="https://aws.amazon.com/s3/pricing/">Amazon S3 定价</a>。</p>
 <table>
 <thead>
@@ -2026,24 +2036,19 @@
 </thead>
 <tbody>
 <tr>
-<td>10RPS</td>
-<td></td>
-<td></td>
+<td>10 RPS</td>
+<td>16.5</td>
+<td>0.38</td>
 </tr>
 <tr>
-<td>100RPS</td>
-<td></td>
-<td></td>
+<td>100 RPS</td>
+<td>165</td>
+<td>3.8</td>
 </tr>
 <tr>
-<td>1000RPS</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>10000RPS</td>
-<td></td>
-<td></td>
+<td>1000 RPS</td>
+<td>1650</td>
+<td>38</td>
 </tr>
 </tbody>
 </table>

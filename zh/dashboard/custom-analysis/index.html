@@ -127,13 +127,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -1600,8 +1600,8 @@
 <li>单击“查询数据”按钮，您将被定向到 Redshift 查询编辑器。</li>
 <li>
 <p>在 Redshift 查询编辑器的“编辑器”视图中，右键单击名称为“clickstream-<project-id>”的工作组，在提示的下拉菜单中，选择“编辑连接”，您将被要求提供连接参数，按照此<a href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2-using.html" target="_blank">指南</a> 使用适当的方法进行连接。</p>
-<div class="admonition note">
-<p class="admonition-title">重要事项</p>
+<div class="admonition info">
+<p class="admonition-title">重要提示</p>
 <p>您需要数据库（名称为<code>&lt;project-id&gt;</code>)的读写权限才能创建自定义视图或表。 例如，您可以使用管理员用户连接到集群或工作组，如果您不知道管理员用户的密码，可以在 Redshift 控制台中重置管理员密码（<a href="https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-security .html" target="_blank">了解更多</a>)。 </p>
 </div>
 </li>
@@ -1611,8 +1611,8 @@
 <li>添加一个新的 SQL 编辑器，并确保您选择了正确的工作组和模式。</li>
 <li>
 <p>为漏斗分析创建一个新视图。 在这个例子中，我们使用了下面的 SQL。</p>
-<details class="sql command">
-<summary>Sql</summary>
+<details class="example">
+<summary>SQL 命令</summary>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">notepad</span><span class="p">.</span><span class="n">clickstream_funnel_view</span><span class="w"> </span><span class="k">as</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">SELECT</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">platform</span><span class="p">,</span>
@@ -1681,7 +1681,7 @@
 <li>Schema（模式）: 选择 <code>notepad</code> </li>
 <li>Tables（表）: 选择 <code>clickstream_funnel_view</code></li>
 </ul>
-<div class="admonition note">
+<div class="admonition tip">
 <p class="admonition-title">提示</p>
 <p>系统会提示您选择“导入到SPICE”或“直接查询您的数据”，请选择“直接查询您的数据”。</p>
 </div>

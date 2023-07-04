@@ -127,13 +127,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -703,29 +703,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1oidc" class="md-nav__link">
-    步骤1：创建OIDC客户端
+  <a href="#1-oidc" class="md-nav__link">
+    步骤 1. 创建OIDC客户端
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    第二步：启动堆栈
+  <a href="#2" class="md-nav__link">
+    步骤 2. 启动堆栈
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-oidc-url" class="md-nav__link">
-    Step 3. 更新 OIDC 客户端的回调 URL
+  <a href="#3-oidc-url" class="md-nav__link">
+    步骤 3. 更新 OIDC 客户端的回调 URL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-web" class="md-nav__link">
-    Step 4. 启动 Web 控制台
+  <a href="#4-web" class="md-nav__link">
+    步骤 4. 启动 Web 控制台
   </a>
   
 </li>
@@ -1567,29 +1567,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1oidc" class="md-nav__link">
-    步骤1：创建OIDC客户端
+  <a href="#1-oidc" class="md-nav__link">
+    步骤 1. 创建OIDC客户端
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    第二步：启动堆栈
+  <a href="#2" class="md-nav__link">
+    步骤 2. 启动堆栈
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-oidc-url" class="md-nav__link">
-    Step 3. 更新 OIDC 客户端的回调 URL
+  <a href="#3-oidc-url" class="md-nav__link">
+    步骤 3. 更新 OIDC 客户端的回调 URL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-web" class="md-nav__link">
-    Step 4. 启动 Web 控制台
+  <a href="#4-web" class="md-nav__link">
+    步骤 4. 启动 Web 控制台
   </a>
   
 </li>
@@ -1624,17 +1624,17 @@
 </ul>
 <h2 id="_2">部署概述</h2>
 <p>按照以下步骤在AWS上部署此解决方案。</p>
-<p><a href="#step-1-create-oidc-client">步骤1：创建OIDC客户端</a></p>
-<p><a href="#step-2-launch-the-stack">步骤2：启动堆栈</a></p>
-<p><a href="#step-3-update-the-callback-url-of-oidc-client">步骤3：更新OIDC客户端的回调URL</a></p>
-<p><a href="#step-4-launch-the-web-console">步骤4：启动Web控制台</a></p>
-<h2 id="1oidc">步骤1：创建OIDC客户端</h2>
+<p><a href="#1-oidc">步骤 1. 创建OIDC客户端</a></p>
+<p><a href="#2">步骤 2. 启动堆栈</a></p>
+<p><a href="#3-oidc-url">步骤 3. 更新OIDC客户端的回调URL</a></p>
+<p><a href="#4-web">步骤 4. 启动Web控制台</a></p>
+<h2 id="1-oidc">步骤 1. 创建OIDC客户端</h2>
 <p>您可以使用现有的OpenID Connect（OIDC）提供者，或按照<a href="../with-oidc/#step-1-create-oidc-client">此指南</a>创建一个OIDC客户端。</p>
-<div class="admonition notice">
-<p class="admonition-title">注意</p>
+<div class="admonition tip">
+<p class="admonition-title">提示</p>
 <p>默认情况下，此解决方案在VPC中部署控制台时不需要SSL证书。您必须使用OIDC客户端来支持具有<code>http</code>协议的回调URL。</p>
 </div>
-<h2 id="_3">第二步：启动堆栈</h2>
+<h2 id="2">步骤 2. 启动堆栈</h2>
 <ol>
 <li>
 <p>登录AWS管理控制台，并使用下方按钮启动AWS CloudFormation模板。</p>
@@ -1648,7 +1648,7 @@
 <tbody>
 <tr>
 <td>在AWS区域中启动</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-test-reference.s3.amazonaws.com/clickstream-analytics-on-aws/v1.0.0_mainline/private-exist-vpc-control-plane-stack.template.json" target="_blank"><img alt="启动堆栈" src="../../images/launch-stack.webp" /></a></td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/private-exist-vpc-control-plane-stack.template.json" target="_blank"><img alt="启动堆栈" src="../../images/launch-stack.webp" /></a></td>
 </tr>
 <tr>
 <td>在AWS中国区域中启动</td>
@@ -1707,7 +1707,7 @@
 <li>选择<strong>创建堆栈</strong>以部署堆栈。</li>
 </ol>
 <p>您可以在AWS CloudFormation控制台中的<strong>状态</strong>列中查看堆栈的状态。大约10分钟后，您应该会收到<strong>CREATE_COMPLETE</strong>状态。</p>
-<h2 id="step-3-oidc-url">Step 3. 更新 OIDC 客户端的回调 URL</h2>
+<h2 id="3-oidc-url">步骤 3. 更新 OIDC 客户端的回调 URL</h2>
 <ol>
 <li>登录 <a href="cloudformation" target="_blank">AWS CloudFormation 控制台</a>。</li>
 <li>选择解决方案的堆栈。</li>
@@ -1719,9 +1719,9 @@
 </ol>
 </li>
 </ol>
-<h2 id="step-4-web">Step 4. 启动 Web 控制台</h2>
-<div class="admonition important">
-<p class="admonition-title">重要</p>
+<h2 id="4-web">步骤 4. 启动 Web 控制台</h2>
+<div class="admonition info">
+<p class="admonition-title">重要提示</p>
 <p>您的登录凭据由 OIDC 提供者管理。在登录到 亚马逊云科技点击流分析 控制台之前，请确保您已在 OIDC 提供者的用户池中创建了至少一个用户。</p>
 </div>
 <ol>

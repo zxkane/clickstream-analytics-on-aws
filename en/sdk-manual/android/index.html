@@ -125,13 +125,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -831,14 +831,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_2" id="__nav_1_7_2_label" tabindex="0">
-          Ingestion
+          Data ingestion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_2">
           <span class="md-nav__icon md-icon"></span>
-          Ingestion
+          Data ingestion
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -935,14 +935,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_3" id="__nav_1_7_3_label" tabindex="0">
-          Data Processing
+          Data processing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_3">
           <span class="md-nav__icon md-icon"></span>
-          Data Processing
+          Data processing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1886,8 +1886,8 @@
 
 <h1 id="clickstream-android-sdk">Clickstream Android SDK</h1>
 <h2 id="introduction">Introduction</h2>
-<p>Clickstream Android SDK can help you easily collect and report in-app events from Android devices to AWS. As part of the solution Clickstream Analytics on AWS, which provisions data pipeline to ingest and process event data into AWS services such as Amazon S3, and Amazon Redshift.</p>
-<p>The SDK is based on the Amplify for Android SDK Core Library and developed according to the Amplify Android SDK plug-in specification. In addition, the SDK is equipped with features that automatically collect common user events and attributes (for example, screen view, and first open) to simplify data collection for users.</p>
+<p>Clickstream Android SDK can help you easily collect in-app click stream data from Android devices to your AWS environments through the data pipeline privisoned by this solution.</p>
+<p>The SDK is based on the Amplify for Android SDK Core Library and developed according to the Amplify Android SDK plug-in specification. In addition, the SDK provides features that automatically collect common user events and attributes (for example, screen view, and first open) to accelerate data collection for users.</p>
 <h3 id="platform-support">Platform Support</h3>
 <p>Clickstream Android SDK supports Android 4.1 (API level 16) and later. </p>
 <h2 id="integrate-the-sdk">Integrate the SDK</h2>
@@ -1941,9 +1941,9 @@
 </span></code></pre></div>
 <h3 id="4-configure-the-sdk">4. Configure the SDK</h3>
 <p>After initializing the SDK, you can use the following code to customize it.</p>
-<div class="admonition important">
+<div class="admonition info">
 <p class="admonition-title">Important</p>
-<p>This configuration will override the default configuration in <code>amplifyconfiguration.json</code> file. </p>
+<p>This configuration will override the default configuration in <code>amplifyconfiguration.json</code> file.</p>
 </div>
 <div class="language-java highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">software.aws.solution.clickstream.ClickstreamAnalytics</span><span class="p">;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
@@ -2083,7 +2083,7 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition important">
+<div class="admonition info">
 <p class="admonition-title">Important</p>
 <ul>
 <li>The character limits are the same for single-width character languages (e.g., English) and double-width character languages (e.g., Chinese).</li>

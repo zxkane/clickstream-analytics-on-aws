@@ -127,13 +127,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -1506,7 +1506,7 @@
 
 <h1 id="amazon-s3">Amazon S3</h1>
 <p>在此选项中，点击流数据在摄取服务器的内存中进行缓冲，然后汇入到 S3 存储桶中。如果不需要实时数据消耗，则此选项提供了最佳的性价比。</p>
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">注意</p>
 <p>与 Kafka 和 KDS 数据宿不同，此选项在摄取服务器中缓冲数据，并在数据汇入 S3 前向 SDK 客户端响应 200 状态码，因此在摄取服务器失败且自动扩展机器正在创建过程中，数据可能会丢失。但值得注意的是，由于解决方案具有高可用性设计，这种可能性非常低。</p>
 </div>

@@ -125,13 +125,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -950,14 +950,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_2" id="__nav_1_7_2_label" tabindex="0">
-          Ingestion
+          Data ingestion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_2">
           <span class="md-nav__icon md-icon"></span>
-          Ingestion
+          Data ingestion
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1054,14 +1054,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_3" id="__nav_1_7_3_label" tabindex="0">
-          Data Processing
+          Data processing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_3">
           <span class="md-nav__icon md-icon"></span>
-          Data Processing
+          Data processing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1701,7 +1701,7 @@
 <h1 id="launch-with-openid-connect-oidc">Launch with OpenID Connect (OIDC)</h1>
 <p><strong>Time to deploy</strong>: Approximately 30 minutes</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<div class="admonition important">
+<div class="admonition info">
 <p class="admonition-title">Important</p>
 <p>The Clickstream Analytics on AWS console is served via CloudFront distribution which is considered as an Internet information service.
 If you are deploying the solution in <strong>AWS China Regions</strong>, the domain must have a valid <a href="https://www.amazonaws.cn/en/support/icp/?nc2=h_l2_su">ICP Recordal</a>.</p>
@@ -1738,7 +1738,7 @@ If you are deploying the solution in <strong>AWS China Regions</strong>, the dom
 </li>
 <li>
 <p>Enter the <strong>Callback URL</strong> and <strong>Sign out URL</strong> using your domain name for Clickstream Analytics on AWS console. 
-    !!! note "Note"
+    !!! info "Note"
         If you're not using custom domain for the console, you don't know the domain name of console. You can input a fake one, for example, <code>clickstream.example.com</code>. Then update it following guidelines in Step 3.</p>
 </li>
 <li>
@@ -1807,8 +1807,8 @@ If you are deploying the solution in <strong>AWS China Regions</strong>, the dom
 <li>Enter a Client ID, which must contain letters (case-insensitive) or numbers. Record the <strong>Client ID</strong> which will be used later.</li>
 <li>
 <p>Change client settings. Enter <code>http[s]://&lt;Clickstream Analytics on AWS Console domain&gt;/signin</code> in <strong>Valid Redirect URIs</strong>，and enter <code>&lt;console domain&gt;</code> and <code>+</code> in <strong>Web Origins</strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>If you're not using custom domain for the console, the domain name of console is not available yet. You can enter a fake one, for example, <code>clickstream.example.com</code>, and then update it following guidelines in Step 3.</p>
 </div>
 </li>
@@ -1879,11 +1879,11 @@ If you are deploying the solution in <strong>AWS China Regions</strong>, the dom
 <tbody>
 <tr>
 <td>Launch in AWS Regions</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-test-reference.s3.amazonaws.com/clickstream-analytics-on-aws/v1.0.0_mainline/cloudfront-s3-control-plane-stack-global-oidc.template.json" target="_blank"><img alt="Launch Stack" src="../../images/launch-stack.webp" /></a></td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/cloudfront-s3-control-plane-stack-global-oidc.template.json" target="_blank"><img alt="Launch Stack" src="../../images/launch-stack.webp" /></a></td>
 </tr>
 <tr>
 <td>Launch with custom domain in AWS Regions</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-test-reference.s3.amazonaws.com/clickstream-analytics-on-aws/v1.0.0_mainline/cloudfront-s3-control-plane-stack-global-customdomain-oidc.template.json" target="_blank"><img alt="Launch Stack" src="../../images/launch-stack.webp" /></a></td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/cloudfront-s3-control-plane-stack-global-customdomain-oidc.template.json" target="_blank"><img alt="Launch Stack" src="../../images/launch-stack.webp" /></a></td>
 </tr>
 <tr>
 <td>Launch in AWS China Regions</td>
@@ -1923,8 +1923,8 @@ If you are deploying the solution in <strong>AWS China Regions</strong>, the dom
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition info">
+<p class="admonition-title">Important</p>
 <p><!-- BEGIN INCLUDE tls-note.md -->
 By default, this deployment uses TLSv1.0 and TLSv1.1 in CloudFront. However, we recommend that you manually configure CloudFront to use the more secure TLSv1.2/TLSv1.3 and apply for a certificate and custom domain to enable this. We highly recommend that you update your TLS configuration and cipher suite selection according to the following recommendations:</p>
 <ul>
@@ -2003,7 +2003,7 @@ By default, this deployment uses TLSv1.0 and TLSv1.1 in CloudFront. However, we 
 </ol>
 <p>You can view the status of the stack in the AWS CloudFormation console in the <strong>Status</strong> column. You should receive a <strong>CREATE_COMPLETE</strong> status in approximately 10 minutes.</p>
 <h2 id="step-3-update-the-callback-url-of-oidc-client">Step 3. Update the callback URL of OIDC client</h2>
-<div class="admonition important">
+<div class="admonition info">
 <p class="admonition-title">Important</p>
 <p>If you don't deploy stack with custom domain, you must complete below steps.</p>
 </div>
@@ -2020,7 +2020,7 @@ By default, this deployment uses TLSv1.0 and TLSv1.1 in CloudFront. However, we 
 </li>
 </ol>
 <h2 id="step-4-setup-dns-resolver">Step 4. Setup DNS Resolver</h2>
-<div class="admonition important">
+<div class="admonition info">
 <p class="admonition-title">Important</p>
 <p>If you deploy stack in AWS Regions, you can skip this step.</p>
 </div>
@@ -2033,7 +2033,7 @@ By default, this deployment uses TLSv1.0 and TLSv1.1 in CloudFront. However, we 
 <li>Create a CNAME record for <strong>ControlPlaneURL</strong> in DNS resolver, which points to the domain <strong>CloudFrontDomainName</strong> obtained in previous step.</li>
 </ol>
 <h2 id="step-5-launch-the-web-console">Step 5. Launch the web console</h2>
-<div class="admonition important">
+<div class="admonition info">
 <p class="admonition-title">Important</p>
 <p>Your login credentials is managed by the OIDC provider. Before signing in to the Clickstream Analytics on AWS console, make sure you have created at least one user in the OIDC provider's user pool.</p>
 </div>

@@ -125,13 +125,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -831,14 +831,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_2" id="__nav_1_7_2_label" tabindex="0">
-          Ingestion
+          Data ingestion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_2">
           <span class="md-nav__icon md-icon"></span>
-          Ingestion
+          Data ingestion
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -935,14 +935,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_3" id="__nav_1_7_3_label" tabindex="0">
-          Data Processing
+          Data processing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_3">
           <span class="md-nav__icon md-icon"></span>
-          Data Processing
+          Data processing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1511,10 +1511,9 @@
 <p>Replace the file names and YourCertificate with the names for your uploaded files and certificate.
 You must specify the <code>file://</code> prefix in the certificate-body, certificate-chain and private-key parameters in the API request. 
 Otherwise, the request fails with a <code>MalformedCertificate: Unknown</code> error message.</p>
-<div class="admonition note">
+<div class="admonition info">
 <p class="admonition-title">Note</p>
-<p>You must specify a path using the --path option. The path must begin with /cloudfront and must include a 
- trailing slash (for example, /cloudfront/test/).</p>
+<p>You must specify a path using the --path option. The path must begin with /cloudfront and must include a trailing slash (for example, /cloudfront/test/).</p>
 </div>
 <p>After the certificate is uploaded, the AWS command <code>upload-server-certificate</code> returns metadata for the uploaded certificate, including the certificate's Amazon Resource Name (ARN), friendly name, identifier (ID), and expiration date.</p>
 <p>To view the uploaded certificate, run the AWS CLI command <code>list-server-certificates</code>:</p>

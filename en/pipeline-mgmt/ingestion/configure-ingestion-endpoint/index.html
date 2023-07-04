@@ -125,13 +125,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -835,14 +835,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_2" id="__nav_1_7_2_label" tabindex="0">
-          Ingestion
+          Data ingestion
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1_7_2">
           <span class="md-nav__icon md-icon"></span>
-          Ingestion
+          Data ingestion
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -949,14 +949,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_7_3" id="__nav_1_7_3_label" tabindex="0">
-          Data Processing
+          Data processing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_7_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_1_7_3">
           <span class="md-nav__icon md-icon"></span>
-          Data Processing
+          Data processing
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1510,8 +1510,8 @@
 </li>
 <li>
 <p><strong>Private Subnets</strong>: select at least two existing VPC private subnets, and the EC2 instances running in ECS will be deployed in these subnets.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>The availability zones where the public subnets are located must be consistent with those of the private subnets.</p>
 </div>
 </li>
@@ -1533,8 +1533,8 @@
 </li>
 <li>
 <p>Disable HTTPS: If users choose to disable HTTPS, the ingestion server will provide HTTP endpoint.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Using HTTP protocol is not secure, because data will be sent without any encryption, and there are high risks of data being leaked or tampered during transmission. Please acknowledge the risk to proceed.</p>
 </div>
 </li>
@@ -1557,23 +1557,23 @@
 <li>App Client Secret</li>
 </ul>
 <p>The format is like:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  {
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    &quot;issuer&quot;:&quot;xxx&quot;,
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    &quot;userEndpoint&quot;:&quot;xxx&quot;,
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    &quot;authorizationEndpoint&quot;:&quot;xxx&quot;,
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    &quot;tokenEndpoint&quot;:&quot;xxx&quot;,
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    &quot;appClientId&quot;:&quot;xxx&quot;,
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    &quot;appClientSecret&quot;:&quot;xxx&quot;
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  }
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;issuer&quot;</span><span class="p">:</span><span class="s2">&quot;xxx&quot;</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;userEndpoint&quot;</span><span class="p">:</span><span class="s2">&quot;xxx&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;authorizationEndpoint&quot;</span><span class="p">:</span><span class="s2">&quot;xxx&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;tokenEndpoint&quot;</span><span class="p">:</span><span class="s2">&quot;xxx&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">&quot;appClientId&quot;</span><span class="p">:</span><span class="s2">&quot;xxx&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&quot;appClientSecret&quot;</span><span class="p">:</span><span class="s2">&quot;xxx&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="p">}</span>
 </span></code></pre></div>
       <strong>Note</strong>: In the OIDC provider, you need to add <code>https://&lt;ingestion server endpoint&gt;/oauth2/idpresponse</code> to "Allowed callback URLs"</p>
 </li>
 <li>
 <p>Access logs: ALB supports delivering detailed logs of all requests it receives. If you enable this option, the solution will automatically enable access logs for you and store the logs into the S3 bucket you selected in previous step.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>The bucket must have <a href="https://docs.aws.amazon.com/elasticloadbalancing/latest/application/enable-access-logging.html">a bucket policy that grants Elastic Load Balancing permission</a> to write to the bucket.</p>
-<p>Below is an example policy for the bucket in <strong>regions available before August 2022</strong>,
+<p>Below is an example policy for the bucket in <strong>regions available before August 2022</strong>,</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1587,9 +1587,51 @@
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="p">]</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">}</span>
-</span></code></pre></div></p>
-<p>Below is an example policy for the bucket in <strong>regions available as of August 2022 or later</strong>,
-<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+</span></code></pre></div>
+<p>Replace <code>elb-account-id</code> with the ID of the AWS account for Elastic Load Balancing for your Region:</p>
+<ul>
+<li>US East (N. Virginia) – 127311923021</li>
+<li>US East (Ohio) – 033677994240</li>
+<li>US West (N. California) – 027434742980</li>
+<li>US West (Oregon) – 797873946194</li>
+<li>Africa (Cape Town) – 098369216593</li>
+<li>Asia Pacific (Hong Kong) – 754344448648</li>
+<li>Asia Pacific (Jakarta) – 589379963580</li>
+<li>Asia Pacific (Mumbai) – 718504428378</li>
+<li>Asia Pacific (Osaka) – 383597477331</li>
+<li>Asia Pacific (Seoul) – 600734575887</li>
+<li>Asia Pacific (Singapore) – 114774131450</li>
+<li>Asia Pacific (Sydney) – 783225319266</li>
+<li>Asia Pacific (Tokyo) – 582318560864</li>
+<li>Canada (Central) – 985666609251</li>
+<li>Europe (Frankfurt) – 054676820928</li>
+<li>Europe (Ireland) – 156460612806</li>
+<li>Europe (London) – 652711504416</li>
+<li>Europe (Milan) – 635631232127</li>
+<li>Europe (Paris) – 009996457667</li>
+<li>Europe (Stockholm) – 897822967062</li>
+<li>Middle East (Bahrain) – 076674570225</li>
+<li>South America (São Paulo) – 507241528517</li>
+<li>China (Beijing) – 638102146993</li>
+<li>China (Ningxia) – 037604701340</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<!--
+            Below is an example policy for the bucket in **regions available as of August 2022 or later**,
+
+            This policy grants permissions to the specified log delivery service. Use this policy for load balancers in Availability Zones in the following Regions:
+
+            - Asia Pacific (Hyderabad)
+            - Asia Pacific (Melbourne)
+            - Europe (Spain)
+            - Europe (Zurich)
+            - Middle East (UAE)
+
+            <div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span>
@@ -1602,12 +1644,8 @@
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="p">]</span>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
-</span></code></pre></div></p>
-</div>
-</li>
-</ul>
-</li>
-</ul>
+</span></code></pre></div>
+-->
 
 
 

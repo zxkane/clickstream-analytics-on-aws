@@ -127,13 +127,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/en/" hreflang="en" class="md-select__link">
+                  <a href="/en/" hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
               
                 <li class="md-select__item">
-                  <a href="/incubator/web-analytics-on-aws/clickstream-analytics-on-aws/zh/" hreflang="zh" class="md-select__link">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
                     简体中文
                   </a>
                 </li>
@@ -1717,11 +1717,11 @@
 
 
 <h1 id="_1">数据模式</h1>
-<p>本文解释了在亚马逊云科技点击流分析中的数据模式和格式。此解决方案使用基于<strong>事件</strong>的数据模型来存储和分析点击流数据，客户端上的每一项活动（例如，点击，查看）都被模型化为具有多个维度的事件。所有事件都有公共维度，但是客户可以灵活地使用JSON对象将值存储到某些维度（例如，事件参数，使用属性）中，以满足收集特定于其业务的信息的需求。这些JSON将存储在允许客户在分析引擎中取消嵌套值的特殊数据类型中。</p>
+<p>本文解释了在亚马逊云科技点击流分析中的数据模式和格式。此解决方案使用基于<strong>事件</strong>的数据模型来存储和分析点击流数据，客户端上的每一项活动（例如，点击，查看）都被模型化为具有多个维度的事件。所有事件都有公共维度，但是客户可以灵活地使用JSON对象将值存储到某些维度（例如，事件参数，用户属性）中，以满足收集特定于其业务的信息的需求。这些JSON将存储在允许客户在分析引擎中取消嵌套值的特殊数据类型中。</p>
 <h2 id="_2">数据库和表</h2>
-<p>对于每个项目，解决方案在Redshift和Athena中创建一个名为<code>&lt;project-id&gt;</code>的数据库。在Redshift中，每个应用程序都会有一个名为<code>app_id</code>的模式，在该模式中，事件数据存储在<code>ods_event</code>表中，用户相关属性存储在<code>dim_user</code>表中。在Athena中，项目中所有应用程序的数据将存储在<code>ods_event</code>表中，该表的分区为app_id，年，月，和日。</p>
+<p>对于每个项目，解决方案在Redshift和Athena中创建一个名为<code>&lt;project-id&gt;</code>的数据库。在Redshift中，每个应用程序都会有一个名为<code>app_id</code>的数据模式，在该模式中，事件数据存储在<code>ods_event</code>表中，用户相关属性存储在<code>dim_user</code>表中。在Athena中，项目中所有应用程序的数据将存储在<code>ods_event</code>表中，该表的分区为app_id，年，月，和日。</p>
 <h2 id="_3">列</h2>
-<p>ods_event表中的每一列都代表一个特定于事件的参数。注意，某些参数嵌套在Redshift中的Super字段或Athena中的Array字段中，例如items和event_params等字段是可重复的。下面将描述表列。</p>
+<p>ods_event表中的每一列都代表一个特定于事件的参数。注意，某些参数嵌套在Redshift中的Super字段或Athena中的Array字段中，例如items和event_params等这些字段里的参数是可重复的。下面将描述表列。</p>
 <h3 id="_4">事件字段</h3>
 <table>
 <thead>
