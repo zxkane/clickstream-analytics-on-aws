@@ -31,7 +31,7 @@ jobs:
           report_paths: './src/data-pipeline/spark-etl/build/test-results/test/TEST-*.xml'
       - name: Add coverage to PR
         id: jacoco
-        uses: madrapps/jacoco-report@v1.3
+        uses: madrapps/jacoco-report@v1.4
         with:
           paths: ./src/data-pipeline/spark-etl/build/reports/jacoco/jacocoAggregatedReport/jacocoAggregatedReport.xml
           token: ${{ secrets.GITHUB_TOKEN }}
