@@ -44,6 +44,23 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  <script async src="https://github.com/awslabs/clickstream-web/releases/download/v0.5.1/clickstream-web.min.js"></script>
+<script>
+    window.onload = function() {
+        window.ClickstreamAnalytics.init({
+            appId: 'docs',
+            endpoint: 'https://pipeline.clickstream.solutions.gcr.aws.dev/collect',
+            pageType: window.PageType.multiPageApp,
+        });
+    };
+</script>
+  
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -1141,6 +1158,62 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdk-manual/wechat/" class="md-nav__link">
+        WeChat Miniprogram SDK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdk-manual/http-api/" class="md-nav__link">
+        HTTP API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdk-manual/user-identifier/" class="md-nav__link">
+        User identifier
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sdk-manual/migrate-from-third-party-sdks/" class="md-nav__link">
+        Migrate from third-party SDKs
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1621,55 +1694,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Redshift</label><label for="__tabbed_1_2">Athena</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-sql highlight"><span class="filename">clickstream-device-view.sql</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">select</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">device</span><span class="p">.</span><span class="n">vendor_id</span><span class="p">::</span><span class="nb">varchar</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">device_id</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">,</span><span class="w"> </span><span class="n">event_date</span><span class="w"> </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">mobile_brand_name</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">mobile_model_name</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">manufacturer</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">screen_width</span><span class="p">::</span><span class="nb">int</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">screen_height</span><span class="p">::</span><span class="nb">int</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">carrier</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">network_type</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">operating_system</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">operating_system_version</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_browser</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_browser_version</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_os</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_os_version</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_device</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_device_category</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">system_language</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">time_zone_offset_seconds</span><span class="p">::</span><span class="nb">int</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">advertising_id</span><span class="p">::</span><span class="nb">varchar</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">,</span><span class="w"> </span><span class="n">user_pseudo_id</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">,</span><span class="w"> </span><span class="n">user_id</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">,</span><span class="w"> </span><span class="k">count</span><span class="p">(</span><span class="n">event_id</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">usage_num</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c1">--pleaes update the following schema name with your schema name</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="k">from</span><span class="w"> </span><span class="err">{{</span><span class="k">schema</span><span class="err">}}</span><span class="p">.</span><span class="n">ods_events</span><span class="w"> </span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">group</span><span class="w"> </span><span class="k">by</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">device_id</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">,</span><span class="w"> </span><span class="n">event_date</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">mobile_brand_name</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">mobile_model_name</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">manufacturer</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">screen_width</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">screen_height</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">carrier</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">network_type</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">operating_system</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">operating_system_version</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_browser</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_browser_version</span>
-</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_os</span><span class="w"> </span>
-</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_os_version</span>
-</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_device</span>
-</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">ua_device_category</span>
-</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">system_language</span>
-</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">time_zone_offset_seconds</span>
-</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">.</span><span class="n">advertising_id</span>
-</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="p">,</span><span class="w"> </span><span class="n">user_pseudo_id</span>
-</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="p">,</span><span class="w"> </span><span class="n">user_id</span><span class="p">;</span>
+<div class="language-sql highlight"><span class="filename">clickstream-device-view.sql</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1869,6 +1894,8 @@
 <p><a class="glightbox" href="../../images/dashboard/device.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="qs-device" src="../../images/dashboard/device.jpg" /></a></p>
 
 
+  
+
 
 
 
@@ -1877,6 +1904,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
         </div>
         
       </main>
@@ -1899,7 +1928,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
