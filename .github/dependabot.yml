@@ -1,0 +1,11 @@
+# Basic `dependabot.yml` file with
+
+version: 2
+updates:
+  # Enable version updates for github-actions
+  - package-ecosystem: "github-actions"
+    # Look for `package.json` and `lock` files in the `root` directory
+    directory: ".github/"
+    # Check the actions for updates every day (weekdays)
+    schedule:
+      interval: "daily"
