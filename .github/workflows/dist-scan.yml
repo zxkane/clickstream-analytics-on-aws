@@ -11,7 +11,7 @@ jobs:
     env:
       iam_role_to_assume: ${{ secrets.ROLE_ARN }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -43,7 +43,7 @@ jobs:
     needs: build-dist
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: templates-${{ github.event.pull_request.number }}
@@ -68,7 +68,7 @@ jobs:
     container:
       image: stelligent/cfn_nag
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: templates-${{ github.event.pull_request.number }}
@@ -84,7 +84,7 @@ jobs:
     env:
       SOLUTION_NAME: clickstream-analytics-on-aws
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
