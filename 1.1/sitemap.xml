@@ -241,11 +241,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://awslabs.github.io/clickstream-analytics-on-aws/1.1/sdk-manual/migrate-from-third-party-sdks/</loc>
-         <lastmod>2023-11-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://awslabs.github.io/clickstream-analytics-on-aws/1.1/sdk-manual/swift/</loc>
          <lastmod>2023-11-07</lastmod>
          <changefreq>daily</changefreq>
