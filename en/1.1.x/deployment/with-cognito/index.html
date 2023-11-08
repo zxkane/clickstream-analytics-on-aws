@@ -16,7 +16,7 @@
       
         <link rel="next" href="../with-oidc/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.20">
     
     
@@ -70,18 +70,7 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
@@ -119,7 +108,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Clickstream Analytics on AWS" class="md-header__button md-logo" aria-label="Clickstream Analytics on AWS" data-md-component="logo">
       
@@ -225,6 +216,10 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -268,40 +263,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-    
-  
-
-
-  
-  
-  
-    
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../solution-overview/" class="md-tabs__link md-tabs__link--active">
-        Implementation Guide
-      </a>
-    </li>
-  
-
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -314,10 +275,8 @@
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Clickstream Analytics on AWS" class="md-nav__button md-logo" aria-label="Clickstream Analytics on AWS" data-md-component="logo">
       
@@ -1720,7 +1679,7 @@
 <p><a href="#step-1-launch-the-stack">Step 1. Launch the stack</a></p>
 <p><a href="#step-2-launch-the-web-console">Step 2. Launch the web console</a></p>
 <h2 id="step-1-launch-the-stack">Step 1. Launch the stack</h2>
-<p>This AWS CloudFormation template automatically deploys the Clickstream Analytics on AWS solution on AWS.</p>
+<p>This AWS CloudFormation template automatically deploys the {{ solution_name }} solution on AWS.</p>
 <ol>
 <li>
 <p>Sign in to the <a href="https://console.aws.amazon.com/">AWS Management Console</a> and select the button to launch the AWS CloudFormation template.</p>
@@ -1734,17 +1693,17 @@
 <tbody>
 <tr>
 <td>Launch stack</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/cloudfront-s3-control-plane-stack-global.template.json" target="_blank"><img alt="Launch Stack" src="../../images/launch-stack.webp" /></a></td>
+<td>[<img alt="Launch Stack" src="../../images/launch-stack.webp" />][cloudfront-cognito-template-url]{target=_blank}</td>
 </tr>
 <tr>
 <td>Launch stack with custom domain</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/cloudfront-s3-control-plane-stack-global-customdomain.template.json" target="_blank"><img alt="Launch Stack" src="../../images/launch-stack.webp" /></a></td>
+<td>[<img alt="Launch Stack" src="../../images/launch-stack.webp" />][cloudfront-cognito-custom-domain-template-url]{target=_blank}</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>The template is launched in the default region after you log in to the console. To launch the Clickstream Analytics on AWS solution in a different AWS Region, use the Region selector in the console navigation bar.</p>
+<p>The template is launched in the default region after you log in to the console. To launch the {{ solution_name }} solution in a different AWS Region, use the Region selector in the console navigation bar.</p>
 </li>
 <li>
 <p>On the <strong>Create stack</strong> page, verify that the correct template URL is shown in the <strong>Amazon S3 URL</strong> text box and choose <strong>Next</strong>.</p>
@@ -1769,24 +1728,15 @@
 <tr>
 <td>Admin User Email</td>
 <td><code>&lt;Requires input&gt;</code></td>
-<td>Specify the email of the Administrator. This email address will receive a temporary password to access the Clickstream Analytics on AWS web console. You can create more users directly in the provisioned Cognito User Pool after launching the solution.</td>
+<td>Specify the email of the Administrator. This email address will receive a temporary password to access the {{ solution_name }} web console. You can create more users directly in the provisioned Cognito User Pool after launching the solution.</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition info">
 <p class="admonition-title">Important</p>
-<p><!-- BEGIN INCLUDE tls-note.md -->
-By default, this deployment uses TLSv1.0 and TLSv1.1 in CloudFront. However, we recommend that you manually configure CloudFront to use the more secure TLSv1.2/TLSv1.3 and apply for a certificate and custom domain to enable this. We highly recommend that you update your TLS configuration and cipher suite selection according to the following recommendations:</p>
-<ul>
-<li><strong>Transport Layer Security Protocol</strong>: Upgrade to TLSv1.2 or higher</li>
-<li><strong>Key Exchange</strong>: ECDHE</li>
-<li><strong>Block Cipher Mode of Operation</strong>: GCM</li>
-<li><strong>Authentication</strong>: ECDSA</li>
-<li><strong>Encryption Cipher</strong>: AES256</li>
-<li><strong>Message Authentication</strong>: SHA(256/384/any hash function except for SHA1)</li>
-</ul>
-<p>Such as TLSv1.2_2021 can meet the above recommendations.
-<!-- END INCLUDE --></p>
+<p>{%
+ include-markdown "tls-note.md"
+%}</p>
 </div>
 </li>
 <li>
@@ -1835,7 +1785,7 @@ By default, this deployment uses TLSv1.0 and TLSv1.1 in CloudFront. However, we 
 </ol>
 <p>You can view the status of the stack in the AWS CloudFormation console in the <strong>Status</strong> column. You should receive a <strong>CREATE_COMPLETE</strong> status in approximately 15 minutes.</p>
 <h2 id="step-2-launch-the-web-console">Step 2. Launch the web Console</h2>
-<p>After the stack is successfully created, this solution generates a CloudFront domain name that gives you access to the Clickstream Analytics on AWS web console.
+<p>After the stack is successfully created, this solution generates a CloudFront domain name that gives you access to the {{ solution_name }} web console.
 Meanwhile, an auto-generated temporary password will be sent to your email address.</p>
 <ol>
 <li>
@@ -1856,10 +1806,12 @@ Meanwhile, an auto-generated temporary password will be sent to your email addre
 <p>b. (Optional) Verify your email address for account recovery.</p>
 </li>
 <li>
-<p>After the verification is complete, the system opens the Clickstream Analytics on AWS web console.</p>
+<p>After the verification is complete, the system opens the {{ solution_name }} web console.</p>
 </li>
 </ol>
-<p>Once you have logged into the Clickstream Analytics on AWS console, you can start to <a href="../../getting-started/1.create-project/">create a project</a> for your applications.</p>
+<p>Once you have logged into the {{ solution_name }} console, you can start to <a href="../../getting-started/1.create-project/">create a project</a> for your applications.</p>
+<p>[cloudfront-cognito-template-url]: https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://{{ aws_bucket }}.s3.amazonaws.com/{{ aws_prefix }}/{{ aws_version }}/cloudfront-s3-control-plane-stack-global.template.json
+[cloudfront-cognito-custom-domain-template-url]: https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://{{ aws_bucket }}.s3.amazonaws.com/{{ aws_prefix }}/{{ aws_version }}/cloudfront-s3-control-plane-stack-global-customdomain.template.json</p>
 
 
   
@@ -1875,6 +1827,11 @@ Meanwhile, an auto-generated temporary password will be sent to your email addre
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
         
       </main>
       
@@ -1896,11 +1853,11 @@ Meanwhile, an auto-generated temporary password will be sent to your email addre
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  </body>
 </html>
