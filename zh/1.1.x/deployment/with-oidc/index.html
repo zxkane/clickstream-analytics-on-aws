@@ -18,7 +18,7 @@
       
         <link rel="next" href="../within-vpc/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.20">
     
     
@@ -72,18 +72,7 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
@@ -121,7 +110,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="Clickstream Analytics on AWS 解决方案" class="md-header__button md-logo" aria-label="Clickstream Analytics on AWS 解决方案" data-md-component="logo">
       
@@ -227,6 +218,10 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -270,40 +265,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-    
-  
-
-
-  
-  
-  
-    
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../solution-overview/" class="md-tabs__link md-tabs__link--active">
-        实施指南
-      </a>
-    </li>
-  
-
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -316,10 +277,8 @@
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Clickstream Analytics on AWS 解决方案" class="md-nav__button md-logo" aria-label="Clickstream Analytics on AWS 解决方案" data-md-component="logo">
       
@@ -1830,11 +1789,11 @@
 <h2 id="_1">先决条件</h2>
 <div class="admonition info">
 <p class="admonition-title">重要提示</p>
-<p>亚马逊云科技点击流分析 控制台是通过 CloudFront 分发提供的，它被视为一项互联网信息服务。
+<p>{{ solution_name }} 控制台是通过 CloudFront 分发提供的，它被视为一项互联网信息服务。
 如果您在 <strong>AWS 中国区域</strong> 部署解决方案，域名必须具有有效的 <a href="https://www.amazonaws.cn/en/support/icp/?nc2=h_l2_su">ICP 备案</a>。</p>
 </div>
 <ul>
-<li>域名。您将使用该域名访问 亚马逊云科技点击流分析 控制台。对于 AWS 中国区域，这是必需的，而对于 AWS 区域则是可选的。</li>
+<li>域名。您将使用该域名访问 {{ solution_name }} 控制台。对于 AWS 中国区域，这是必需的，而对于 AWS 区域则是可选的。</li>
 <li>在 AWS IAM 中的 SSL 证书。SSL 必须与给定的域名关联。按照 <a href="../../resources/upload-ssl-certificate/">此指南</a> 将 SSL 证书上传到 IAM。这仅适用于 AWS 中国区域。</li>
 </ul>
 <h2 id="_2">部署概述</h2>
@@ -1862,18 +1821,18 @@
 <li>在选择 <strong>应用类型</strong> 时选择 <strong>公共客户端</strong>。确保不要更改 <strong>客户端密钥</strong> 的选择 <strong>不生成客户端密钥</strong>。</li>
 <li>在 <strong>OpenID Connect 作用域</strong> 中添加 <strong>Profile</strong>。</li>
 <li>
-<p>使用您的域名为 亚马逊云科技点击流分析 控制台设置 <strong>回调 URL</strong> 和 <strong>登出 URL</strong>。
+<p>使用您的域名为 {{ solution_name }} 控制台设置 <strong>回调 URL</strong> 和 <strong>登出 URL</strong>。
     !!! info "注意"
         如果您未为控制台使用自定义域名，则无法获得控制台的域名。您可以输入一个虚假的域名，例如 <code>clickstream.example.com</code>，然后根据第 3 步中的指南进行更新。</p>
 </li>
 <li>
 <p>如果您的托管 UI 设置完毕，您应该能够看到如下所示的内容。</p>
-<p><a class="glightbox" href="../../images/OIDC/cognito-hostUI-new.jpeg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cognito host ui" src="../../images/OIDC/cognito-hostUI-new.jpeg" /></a></p>
+<p><img alt="cognito host ui" src="../../images/OIDC/cognito-hostUI-new.jpeg" /></p>
 </li>
 <li>
 <p>将应用客户端 ID、用户池 ID 和 AWS 区域保存到一个文件中，稍后会用到。</p>
-<p><a class="glightbox" href="../../images/OIDC/cognito-new-console-clientID.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cognito client id" src="../../images/OIDC/cognito-new-console-clientID.png" /></a>
-   <a class="glightbox" href="../../images/OIDC/cognito-new-console-userpoolID.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cognito userpool id" src="../../images/OIDC/cognito-new-console-userpoolID.png" /></a></p>
+<p><img alt="cognito client id" src="../../images/OIDC/cognito-new-console-clientID.png" />
+   <img alt="cognito userpool id" src="../../images/OIDC/cognito-new-console-userpoolID.png" /></p>
 </li>
 </ol>
 <p>在<a href="#2">步骤 2. 启动堆栈</a>中，使用来自您的 Cognito 用户池的以下参数。</p>
@@ -1891,14 +1850,14 @@
 <li>输入 <strong>Application Name</strong> 和 <strong>Subdomain</strong>。</li>
 <li>
 <p>从 Endpoint Information 将 <code>App ID</code>（即 <code>client_id</code>）和 <code>Issuer</code> 保存到一个文本文件中，稍后会用到。</p>
-<p><a class="glightbox" href="../../images/OIDC/authing-endpoint-info.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="authing endpoint info" src="../../images/OIDC/authing-endpoint-info.png" /></a></p>
+<p><img alt="authing endpoint info" src="../../images/OIDC/authing-endpoint-info.png" /></p>
 </li>
 <li>
 <p>将 <code>Login Callback URL</code> 和 <code>Logout Callback URL</code> 更新为您记录的 IPC 域名。</p>
 </li>
 <li>
 <p>设置授权配置。</p>
-<p><a class="glightbox" href="../../images/OIDC/authing-authorization-configuration.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="authing authorization configuration" src="../../images/OIDC/authing-authorization-configuration.png" /></a></p>
+<p><img alt="authing authorization configuration" src="../../images/OIDC/authing-authorization-configuration.png" /></p>
 </li>
 </ol>
 <p>您已成功创建了 Authing 自建应用。</p>
@@ -1920,11 +1879,11 @@
 </li>
 <li>
 <p>转到 realm 设置页面。选择 <strong>Endpoints</strong>，然后从列表中选择 <strong>OpenID Endpoint Configuration</strong>。</p>
-<p><a class="glightbox" href="../../images/OIDC/keycloak-example-realm.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="keycloak realm" src="../../images/OIDC/keycloak-example-realm.png" /></a></p>
+<p><img alt="keycloak realm" src="../../images/OIDC/keycloak-example-realm.png" /></p>
 </li>
 <li>
 <p>在浏览器中打开的 JSON 文件中，记录将在稍后使用的 <strong>issuer</strong> 值。</p>
-<p><a class="glightbox" href="../../images/OIDC/keycloak-OIDC-config.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="keycloak oidc config" src="../../images/OIDC/keycloak-OIDC-config.png" /></a></p>
+<p><img alt="keycloak oidc config" src="../../images/OIDC/keycloak-OIDC-config.png" /></p>
 </li>
 <li>
 <p>返回 Keycloak 控制台，在左侧导航栏中选择 <strong>Clients</strong>，然后选择 <strong>Create</strong>。</p>
@@ -1933,7 +1892,7 @@
 <p>输入一个包含字母（不区分大小写）或数字的 Client ID。记录将在稍后使用的 <strong>Client ID</strong>。</p>
 </li>
 <li>
-<p>更改客户端设置。在 <strong>Valid Redirect URIs</strong> 中输入 <code>http[s]://&lt;亚马逊云科技点击流分析 Console domain&gt;/signin</code>，在 <strong>Web Origins</strong> 中输入 <code>&lt;console domain&gt;</code> 和 <code>+</code>。</p>
+<p>更改客户端设置。在 <strong>Valid Redirect URIs</strong> 中输入 <code>http[s]://&lt;{{ solution_name }} Console domain&gt;/signin</code>，在 <strong>Web Origins</strong> 中输入 <code>&lt;console domain&gt;</code> 和 <code>+</code>。</p>
 <div class="admonition tip">
 <p class="admonition-title">提示</p>
 <p>如果您没有为控制台使用自定义域名，则控制台的域名尚不可用。您可以输入一个虚假的域名，例如 <code>clickstream.example.com</code>，然后在第 3 步中按照指南进行更新。</p>
@@ -1957,7 +1916,7 @@
 <li>确保您可以登录到 ADFS 登录页面。URL 应为 <code>https://adfs.domain.com/adfs/ls/idpinitiatedSignOn.aspx</code>，您需要将 <strong>adfs.domain.com</strong> 替换为您实际的 ADFS 域。</li>
 <li>登录到您的 <strong>域控制器</strong>，并打开 <strong>Active Directory Users and Computers</strong>。</li>
 <li>
-<p>为 亚马逊云科技点击流分析 用户创建一个 <strong>安全组</strong>，并将计划中的 亚马逊云科技点击流分析 用户添加到此安全组中。</p>
+<p>为 {{ solution_name }} 用户创建一个 <strong>安全组</strong>，并将计划中的 {{ solution_name }} 用户添加到此安全组中。</p>
 </li>
 <li>
 <p>登录到 ADFS 服务器，并打开 <strong>ADFS Management</strong>。</p>
@@ -1966,7 +1925,7 @@
 <p>右键单击 <strong>Application Groups</strong>，选择 <strong>Application Group</strong>，然后输入 Application Group 的名称。在 <strong>Client-Server Applications</strong> 下选择 <strong>Web browser accessing a web application</strong> 选项，并选择 <strong>Next</strong>。</p>
 </li>
 <li>
-<p>在 <strong>Redirect URI</strong> 下记录 <strong>Client Identifier</strong> (<code>client_id</code>)，输入您的 亚马逊云科技点击流分析 域名（例如 <code>xx.example.com</code>），然后选择 <strong>Add</strong>，再选择 <strong>Next</strong>。</p>
+<p>在 <strong>Redirect URI</strong> 下记录 <strong>Client Identifier</strong> (<code>client_id</code>)，输入您的 {{ solution_name }} 域名（例如 <code>xx.example.com</code>），然后选择 <strong>Add</strong>，再选择 <strong>Next</strong>。</p>
 </li>
 <li>
 <p>在 <strong>Choose Access Control Policy</strong> 窗口中，选择 <strong>Permit specific group</strong>，在 Policy 部分下选择 <strong>parameters</strong>，将在步骤 4 中创建的安全组添加进去，然后点击 <strong>Next</strong>。您可以根据需求配置其他访问控制策略。</p>
@@ -1977,14 +1936,14 @@
 <li>
 <p>在 ADFS 服务器上打开 Windows PowerShell，并运行以下命令以配置 ADFS 允许您计划的 URL 的 CORS。</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Set-AdfsResponseHeaders<span class="w"> </span>-EnableCORS<span class="w"> </span><span class="nv">$true</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Set-AdfsResponseHeaders<span class="w"> </span>-CORSTrustedOrigins<span class="w"> </span>https://&lt;your-clickstream-analytics-on-aws-domain&gt;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Set-AdfsResponseHeaders<span class="w"> </span>-CORSTrustedOrigins<span class="w"> </span>https://&lt;your-<span class="o">{{</span><span class="w"> </span>solution<span class="w"> </span><span class="o">}}</span>-domain&gt;
 </span></code></pre></div>
 </li>
 <li>
 <p>在 ADFS 服务器上的 Windows PowerShell 下，运行以下命令以获取 ADFS 的 Issuer（<code>issuer</code>），类似于 <code>https://adfs.example.com/adfs</code>。</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Get-ADFSProperties<span class="w"> </span><span class="p">|</span><span class="w"> </span>Select<span class="w"> </span>IdTokenIssuer
 </span></code></pre></div>
-<p><a class="glightbox" href="../../images/OIDC/adfs-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get adfs properties" src="../../images/OIDC/adfs-9.png" /></a></p>
+<p><img alt="get adfs properties" src="../../images/OIDC/adfs-9.png" /></p>
 </li>
 </ol>
 <p>在<a href="#2">步骤 2. 启动堆栈</a>中，使用来自您的 ADFS 服务器的以下参数。</p>
@@ -2006,21 +1965,21 @@
 <tbody>
 <tr>
 <td>在 AWS 区域中启动</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/cloudfront-s3-control-plane-stack-global-oidc.template.json" target="_blank"><img alt="启动堆栈" src="../../images/launch-stack.webp" /></a></td>
+<td>[<img alt="启动堆栈" src="../../images/launch-stack.webp" />][standard-oidc-template-url]{target=_blank}</td>
 </tr>
 <tr>
 <td>在 AWS 区域中使用自定义域名启动</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/cloudfront-s3-control-plane-stack-global-customdomain-oidc.template.json" target="_blank"><img alt="启动堆栈" src="../../images/launch-stack.webp" /></a></td>
+<td>[<img alt="启动堆栈" src="../../images/launch-stack.webp" />][standard-oidc-with-custom-domain-template-url]{target=_blank}</td>
 </tr>
 <tr>
 <td>在 AWS 中国区域中启动</td>
-<td><a href="https://console.amazonaws.cn/cloudformation/home#/stacks/new?templateURL=https://aws-gcr-solutions.s3.cn-north-1.amazonaws.com.cn/clickstream-analytics-on-aws/latest/cn/cloudfront-s3-control-plane-stack-cn.template.json" target="_blank"><img alt="启动堆栈" src="../../images/launch-stack.webp" /></a></td>
+<td>[<img alt="启动堆栈" src="../../images/launch-stack.webp" />][cn-oidc-template-url]{target=_blank}</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>模板将在您登录到控制台后的默认区域中启动。若要在不同的 AWS 区域中启动 亚马逊云科技点击流分析 解决方案，请使用控制台导航栏中的区域选择器。</p>
+<p>模板将在您登录到控制台后的默认区域中启动。若要在不同的 AWS 区域中启动 {{ solution_name }} 解决方案，请使用控制台导航栏中的区域选择器。</p>
 </li>
 <li>在<strong>创建堆栈</strong>页面上，验证<strong>Amazon S3 URL</strong>文本框中显示的正确模板 URL，然后选择<strong>下一步</strong>。</li>
 <li>在<strong>指定堆栈详细信息</strong>页面上，为解决方案堆栈分配一个名称。有关命名字符限制的信息，请参阅<em>AWS 身份和访问管理用户指南</em>中的 <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-limits.html" target="_blank">IAM 和 AWS STS 限额</a>。</li>
@@ -2052,18 +2011,9 @@
 </table>
 <div class="admonition info">
 <p class="admonition-title">重要提示</p>
-<p><!-- BEGIN INCLUDE tls-note.md -->
-默认情况下，此部署在CloudFront中使用TLSv1.0和TLSv1.1。但是，我们建议您手动配置CloudFront以使用更安全的TLSv1.2/TLSv1.3，并申请证书和自定义域来启用此功能。我们强烈建议您根据以下建议更新您的TLS配置和密码套件选择：</p>
-<ul>
-<li><strong>传输层安全协议</strong>：升级到TLSv1.2或更高版本</li>
-<li><strong>密钥交换</strong>：ECDHE</li>
-<li><strong>块密码操作模式</strong>：GCM</li>
-<li><strong>身份验证</strong>：ECDSA</li>
-<li><strong>加密密码</strong>：AES256</li>
-<li><strong>消息鉴别</strong>：SHA（256/384/除SHA1以外的任何哈希函数）</li>
-</ul>
-<p>例如，TLSv1.2_2021 可以满足上述建议。
-<!-- END INCLUDE --></p>
+<p>{%
+include-markdown "tls-note.md"
+%}</p>
 </div>
 </li>
 <li>
@@ -2151,7 +2101,7 @@
 <p class="admonition-title">重要提示</p>
 <p>如果您在 AWS 区域中部署了栈，则可以跳过此步骤。</p>
 </div>
-<p>该解决方案提供了一个 CloudFront 分发，用于访问 亚马逊云科技点击流分析 控制台。</p>
+<p>该解决方案提供了一个 CloudFront 分发，用于访问 {{ solution_name }} 控制台。</p>
 <ol>
 <li>登录到 <a href="https://console.aws.amazon.com/cloudformation/" target="_blank">AWS CloudFormation 控制台</a>。</li>
 <li>选择解决方案的栈。</li>
@@ -2162,15 +2112,18 @@
 <h2 id="5-web">步骤 5. 启动Web控制台</h2>
 <div class="admonition info">
 <p class="admonition-title">重要提示</p>
-<p>您的登录凭据由OIDC提供者管理。在登录亚马逊云科技点击流分析控制台之前，请确保在OIDC提供者的用户池中至少创建了一个用户。</p>
+<p>您的登录凭据由OIDC提供者管理。在登录{{ solution_name }}控制台之前，请确保在OIDC提供者的用户池中至少创建了一个用户。</p>
 </div>
 <ol>
 <li>在Web浏览器中使用之前分配的域名或生成的<strong>ControlPlaneURL</strong>。</li>
 <li>选择<strong>登录</strong>，并导航到OIDC提供者。</li>
 <li>输入登录凭据。您可能会被要求根据OIDC提供者的策略更改首次登录时的默认密码。</li>
-<li>验证完成后，系统将打开亚马逊云科技点击流分析的Web控制台。</li>
+<li>验证完成后，系统将打开{{ solution_name }}的Web控制台。</li>
 </ol>
-<p>一旦您成功登录亚马逊云科技点击流分析控制台，您就可以开始为您的应用程序<a href="../../getting-started/1.create-project/">创建一个项目</a>。</p>
+<p>一旦您成功登录{{ solution_name }}控制台，您就可以开始为您的应用程序<a href="../../getting-started/1.create-project/">创建一个项目</a>。</p>
+<p>[standard-oidc-template-url]: https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://{{ aws_bucket }}.s3.amazonaws.com/{{ aws_prefix }}/{{ aws_version }}/cloudfront-s3-control-plane-stack-global-oidc.template.json
+[standard-oidc-with-custom-domain-template-url]: https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://{{ aws_bucket }}.s3.amazonaws.com/{{ aws_prefix }}/{{ aws_version }}/cloudfront-s3-control-plane-stack-global-customdomain-oidc.template.json
+[cn-oidc-template-url]: https://console.amazonaws.cn/cloudformation/home#/stacks/new?templateURL=https://{{ aws_cn_bucket }}.s3.cn-north-1.amazonaws.com.cn/{{ aws_cn_prefix }}/{{ aws_cn_version }}/cloudfront-s3-control-plane-stack-cn.template.json</p>
 
 
   
@@ -2186,6 +2139,11 @@
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
         
       </main>
       
@@ -2207,11 +2165,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  </body>
 </html>

@@ -18,7 +18,7 @@
       
         <link rel="next" href="../with-oidc/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.20">
     
     
@@ -72,18 +72,7 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
@@ -121,7 +110,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="Clickstream Analytics on AWS 解决方案" class="md-header__button md-logo" aria-label="Clickstream Analytics on AWS 解决方案" data-md-component="logo">
       
@@ -227,6 +218,10 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -270,40 +265,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-    
-  
-
-
-  
-  
-  
-    
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../solution-overview/" class="md-tabs__link md-tabs__link--active">
-        实施指南
-      </a>
-    </li>
-  
-
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -316,10 +277,8 @@
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Clickstream Analytics on AWS 解决方案" class="md-nav__button md-logo" aria-label="Clickstream Analytics on AWS 解决方案" data-md-component="logo">
       
@@ -1708,7 +1667,7 @@
 <p><a href="#1">步骤 1. 启动堆栈</a></p>
 <p><a href="#2-web">步骤 2. 启动 Web 控制台</a></p>
 <h2 id="1">步骤 1. 启动堆栈</h2>
-<p>此 AWS CloudFormation 模板会在 AWS 上自动部署 亚马逊云科技点击流分析 解决方案。</p>
+<p>此 AWS CloudFormation 模板会在 AWS 上自动部署 {{ solution_name }} 解决方案。</p>
 <ol>
 <li>
 <p>登录到 <a href="https://console.aws.amazon.com/">AWS 管理控制台</a>，并选择启动 AWS CloudFormation 模板的按钮。</p>
@@ -1722,17 +1681,17 @@
 <tbody>
 <tr>
 <td>启动堆栈</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/cloudfront-s3-control-plane-stack-global.template.json" target="_blank"><img alt="启动堆栈" src="../../images/launch-stack.webp" /></a></td>
+<td>[<img alt="启动堆栈" src="../../images/launch-stack.webp" />][cloudfront-cognito-template-url]{target=_blank}</td>
 </tr>
 <tr>
 <td>启动具有自定义域的堆栈</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/cloudfront-s3-control-plane-stack-global-customdomain.template.json" target="_blank"><img alt="启动堆栈" src="../../images/launch-stack.webp" /></a></td>
+<td>[<img alt="启动堆栈" src="../../images/launch-stack.webp" />][cloudfront-cognito-custom-domain-template-url]{target=_blank}</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>登录到控制台后，模板会在默认区域中启动。若要在其他 AWS 区域中启动 亚马逊云科技点击流分析 解决方案，请使用控制台导航栏中的区域选择器。</p>
+<p>登录到控制台后，模板会在默认区域中启动。若要在其他 AWS 区域中启动 {{ solution_name }} 解决方案，请使用控制台导航栏中的区域选择器。</p>
 </li>
 <li>
 <p>在 <strong>创建堆栈</strong> 页面上，验证 <strong>Amazon S3 URL</strong> 文本框中显示的正确模板 URL，并选择 <strong>下一步</strong>。</p>
@@ -1757,24 +1716,15 @@
 <tr>
 <td>管理员用户电子邮件</td>
 <td><code>&lt;需要输入&gt;</code></td>
-<td>指定管理员的电子邮件地址。此电子邮件地址将收到一个临时密码，用于访问 亚马逊云科技点击流分析 Web 控制台。您可以在启动解决方案后直接在配置的 Cognito 用户池中创建更多用户。</td>
+<td>指定管理员的电子邮件地址。此电子邮件地址将收到一个临时密码，用于访问 {{ solution_name }} Web 控制台。您可以在启动解决方案后直接在配置的 Cognito 用户池中创建更多用户。</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition info">
 <p class="admonition-title">重要提示</p>
-<p><!-- BEGIN INCLUDE tls-note.md -->
-默认情况下，此部署在CloudFront中使用TLSv1.0和TLSv1.1。但是，我们建议您手动配置CloudFront以使用更安全的TLSv1.2/TLSv1.3，并申请证书和自定义域来启用此功能。我们强烈建议您根据以下建议更新您的TLS配置和密码套件选择：</p>
-<ul>
-<li><strong>传输层安全协议</strong>：升级到TLSv1.2或更高版本</li>
-<li><strong>密钥交换</strong>：ECDHE</li>
-<li><strong>块密码操作模式</strong>：GCM</li>
-<li><strong>身份验证</strong>：ECDSA</li>
-<li><strong>加密密码</strong>：AES256</li>
-<li><strong>消息鉴别</strong>：SHA（256/384/除SHA1以外的任何哈希函数）</li>
-</ul>
-<p>例如，TLSv1.2_2021 可以满足上述建议。
-<!-- END INCLUDE --></p>
+<p>{%
+include-markdown "tls-note.md"
+%}</p>
 </div>
 </li>
 <li>
@@ -1823,7 +1773,7 @@
 </ol>
 <p>您可以在 AWS CloudFormation 控制台的 <strong>状态</strong> 列中查看堆栈的状态。大约 15 分钟后，您应该会收到 <strong>CREATE_COMPLETE</strong> 状态。</p>
 <h2 id="2-web">步骤 2. 启动 Web 控制台</h2>
-<p>堆栈成功创建后，此解决方案会生成一个 CloudFront 域名，用于访问 亚马逊云科技点击流分析 Web 控制台。
+<p>堆栈成功创建后，此解决方案会生成一个 CloudFront 域名，用于访问 {{ solution_name }} Web 控制台。
 与此同时，一个自动生成的临时密码将发送到您的电子邮件地址。</p>
 <ol>
 <li>
@@ -1844,10 +1794,12 @@
 <p>b.（可选）验证您的电子邮件地址以进行账户恢复。</p>
 </li>
 <li>
-<p>完成验证后，系统会打开 亚马逊云科技点击流分析 Web 控制台。</p>
+<p>完成验证后，系统会打开 {{ solution_name }} Web 控制台。</p>
 </li>
 </ol>
-<p>登录到 亚马逊云科技点击流分析 控制台后，您可以开始为您的应用程序<a href="../../getting-started/1.create-project/">创建一个项目</a>。</p>
+<p>登录到 {{ solution_name }} 控制台后，您可以开始为您的应用程序<a href="../../getting-started/1.create-project/">创建一个项目</a>。</p>
+<p>[cloudfront-cognito-template-url]: https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://{{ aws_bucket }}.s3.amazonaws.com/{{ aws_prefix }}/{{ aws_version }}/cloudfront-s3-control-plane-stack-global.template.json
+[cloudfront-cognito-custom-domain-template-url]: https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://{{ aws_bucket }}.s3.amazonaws.com/{{ aws_prefix }}/{{ aws_version }}/cloudfront-s3-control-plane-stack-global-customdomain.template.json</p>
 
 
   
@@ -1863,6 +1815,11 @@
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
         
       </main>
       
@@ -1884,11 +1841,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  </body>
 </html>

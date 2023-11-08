@@ -18,7 +18,7 @@
       
         <link rel="next" href="../../getting-started/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.20">
     
     
@@ -72,18 +72,7 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
@@ -121,7 +110,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="Clickstream Analytics on AWS 解决方案" class="md-header__button md-logo" aria-label="Clickstream Analytics on AWS 解决方案" data-md-component="logo">
       
@@ -227,6 +218,10 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
@@ -270,40 +265,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-    
-  
-
-
-  
-  
-  
-    
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../solution-overview/" class="md-tabs__link md-tabs__link--active">
-        实施指南
-      </a>
-    </li>
-  
-
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -316,10 +277,8 @@
                   <div class="md-sidebar__inner">
                     
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Clickstream Analytics on AWS 解决方案" class="md-nav__button md-logo" aria-label="Clickstream Analytics on AWS 解决方案" data-md-component="logo">
       
@@ -1773,17 +1732,17 @@
 <tbody>
 <tr>
 <td>在AWS区域中启动</td>
-<td><a href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://solutions-reference.s3.amazonaws.com/clickstream-analytics-on-aws/latest/private-exist-vpc-control-plane-stack.template.json" target="_blank"><img alt="启动堆栈" src="../../images/launch-stack.webp" /></a></td>
+<td>[<img alt="启动堆栈" src="../../images/launch-stack.webp" />][standard-intranet-template-url]{target=_blank}</td>
 </tr>
 <tr>
 <td>在AWS中国区域中启动</td>
-<td><a href="https://console.amazonaws.cn/cloudformation/home#/stacks/new?templateURL=https://aws-gcr-solutions.s3.cn-north-1.amazonaws.com.cn/clickstream-analytics-on-aws/latest/cn/private-exist-vpc-control-plane-stack.template.json" target="_blank"><img alt="启动堆栈" src="../../images/launch-stack.webp" /></a></td>
+<td>[<img alt="启动堆栈" src="../../images/launch-stack.webp" />][cn-intranet-template-url]{target=_blank}</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>登录控制台后，模板将在默认区域中启动。如果要在其他AWS区域中启动亚马逊云科技点击流分析解决方案，请使用控制台导航栏中的区域选择器。</p>
+<p>登录控制台后，模板将在默认区域中启动。如果要在其他AWS区域中启动{{ solution_name }}解决方案，请使用控制台导航栏中的区域选择器。</p>
 </li>
 <li>在<strong>创建堆栈</strong>页面上，验证<strong>Amazon S3 URL</strong>文本框中显示的正确模板URL，并选择<strong>下一步</strong>。</li>
 <li>在<strong>指定堆栈详细信息</strong>页面上，为您的解决方案堆栈指定一个名称。有关命名字符限制的信息，请参阅<em>AWS Identity and Access Management用户指南</em>中的<a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-limits.html" target="_blank">IAM和AWS STS配额</a>部分。</li>
@@ -1847,7 +1806,7 @@
 <h2 id="4-web">步骤 4. 启动 Web 控制台</h2>
 <div class="admonition info">
 <p class="admonition-title">重要提示</p>
-<p>您的登录凭据由 OIDC 提供者管理。在登录到 亚马逊云科技点击流分析 控制台之前，请确保您已在 OIDC 提供者的用户池中创建了至少一个用户。</p>
+<p>您的登录凭据由 OIDC 提供者管理。在登录到 {{ solution_name }} 控制台之前，请确保您已在 OIDC 提供者的用户池中创建了至少一个用户。</p>
 </div>
 <ol>
 <li>由于您将解决方案控制台部署在无公共访问权限的 VPC 中，您需要建立与由内部应用负载均衡器提供服务的解决方案控制台的网络连接。以下是一些选项供您参考。<ol>
@@ -1860,9 +1819,11 @@
 <li>在 Web 浏览器中使用先前分配的域名或生成的 <strong>ControlPlaneURL</strong>。</li>
 <li>选择 <strong>登录</strong>，并导航到 OIDC 提供者。</li>
 <li>输入登录凭据。根据您的 OIDC 提供者的策略，您可能会被要求更改首次登录的默认密码。</li>
-<li>完成验证后，系统将打开 亚马逊云科技点击流分析 Web 控制台。</li>
+<li>完成验证后，系统将打开 {{ solution_name }} Web 控制台。</li>
 </ol>
-<p>登录到 亚马逊云科技点击流分析 控制台后，您可以开始为您的应用程序<a href="../../getting-started/1.create-project/">创建项目</a>。</p>
+<p>登录到 {{ solution_name }} 控制台后，您可以开始为您的应用程序<a href="../../getting-started/1.create-project/">创建项目</a>。</p>
+<p>[standard-intranet-template-url]: https://console.aws.amazon.com/cloudformation/home#/stacks/new?templateURL=https://{{ aws_bucket }}.s3.amazonaws.com/{{ aws_prefix }}/{{ aws_version }}/private-exist-vpc-control-plane-stack.template.json
+[cn-intranet-template-url]: https://console.amazonaws.cn/cloudformation/home#/stacks/new?templateURL=https://{{ aws_cn_bucket }}.s3.cn-north-1.amazonaws.com.cn/{{ aws_cn_prefix }}/{{ aws_cn_version }}/private-exist-vpc-control-plane-stack.template.json</p>
 
 
   
@@ -1878,6 +1839,11 @@
   <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
         
       </main>
       
@@ -1899,11 +1865,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.highlight", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"default": "latest", "provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  </body>
 </html>
