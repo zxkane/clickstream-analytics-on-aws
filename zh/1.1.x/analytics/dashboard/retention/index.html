@@ -1075,7 +1075,7 @@
         
   
   <span class="md-ellipsis">
-    步骤4. 查看仪表板
+    步骤4. 分析数据
   </span>
   
 
@@ -1483,7 +1483,7 @@
         
   
   <span class="md-ellipsis">
-    管道管理
+    管道维护
   </span>
   
 
@@ -1613,6 +1613,27 @@
   
   <span class="md-ellipsis">
     Web SDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sdk-manual/flutter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flutter SDK
   </span>
   
 
@@ -2883,6 +2904,9 @@
      ````
  ===“雅典娜”
      ```sql title=&quot;clickstream-lifecycle-weekly-query.sql&quot;
+     -- run following command to load latest partition
+     -- msck repair table {{database}}.{{eventTable}};
+
      with weekly_usage as (
        select 
          user_pseudo_id, 
@@ -2927,6 +2951,9 @@
      group by 1,2
      ````
      ```sql title=&quot;clickstream-lifecycle-daily-query.sql&quot;
+     -- run following command to load latest partition
+     -- msck repair table {{database}}.{{eventTable}};
+
      with daily_usage as (
        select 
          user_pseudo_id, 
@@ -2973,6 +3000,9 @@
        group by 1,2;
      ````
      ```sql title=&quot;clickstream-lifecycle-daily-query.sql&quot;
+     -- run following command to load latest partition
+     -- msck repair table {{database}}.{{eventTable}};
+
      with base as (
        select 
          *
