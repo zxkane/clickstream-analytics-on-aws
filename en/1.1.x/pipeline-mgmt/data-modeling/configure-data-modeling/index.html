@@ -1073,7 +1073,7 @@
         
   
   <span class="md-ellipsis">
-    Step 4. View dashboard
+    Step 4. Analyze data
   </span>
   
 
@@ -1532,7 +1532,7 @@
         
   
   <span class="md-ellipsis">
-    Pipeline management
+    Pipeline maintenance
   </span>
   
 
@@ -1662,6 +1662,27 @@
   
   <span class="md-ellipsis">
     Web SDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sdk-manual/flutter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flutter SDK
   </span>
   
 
@@ -2810,12 +2831,6 @@
 <li>
 <p><strong>Data range</strong>: Considering the cost performance issue of having Redshift to save all the data, we recommend that Redshift save hot data and that all data are stored in S3. It is necessary to delete expired data in Redshift on a regular basis.</p>
 </li>
-</ul>
-</li>
-<li>
-<p><strong>Additional Settings</strong></p>
-<ul>
-<li><strong>User table upsert frequency</strong>: Since all versions of user properties are saved in Redshift. We create a user-scoped custom dimension table <code>dim_users</code> in DWD layer so the BI dashboard can report on the latest user property. The workflow run on schedule to upsert (update and insert) users.</li>
 </ul>
 </li>
 <li>
