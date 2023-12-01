@@ -1,4 +1,4 @@
-# Clickstream Analytics on AWS
+# Clickstream Analytics on AWS PR1
 
 An end-to-end solution to collect, ingest, analyze, and visualize clickstream data inside your web and mobile applications.
 
