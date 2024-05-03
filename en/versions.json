@@ -8,16 +8,16 @@
     "version": "1.1.x",
     "title": "1.1.x (preview)",
     "aliases": [
-      "dev",
-      "preview"
+      "preview",
+      "dev"
     ]
   },
   {
     "version": "1.0.x",
     "title": "1.0.x (latest)",
     "aliases": [
-      "(dev)",
-      "latest"
+      "latest",
+      "(dev)"
     ]
   }
 ]
